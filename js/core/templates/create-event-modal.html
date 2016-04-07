@@ -1,0 +1,76 @@
+<div class="modal-header">
+	<h3 class="modal-title">Dodaj wydarzenie</h3>
+</div>
+<div class="modal-body">
+	<form name="createEventForm" method="post" ng-submit="confirm(input)">
+		<fieldset ng-disabled = "progress > 0">
+			<div class="radio">
+				<label>
+					<input ng-model="input.group" type="radio" name="groupsRadio" id="groupsRadio0" value="0" required>
+					Rekreacja
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input ng-model="input.group" type="radio" name="groupsRadio" id="groupsRadio1" value="1" required>
+					Turystyka
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input ng-model="input.group" type="radio" name="groupsRadio" id="groupsRadio2" value="2" required>
+					Imprezy
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input ng-model="input.group" type="radio" name="groupsRadio" id="groupsRadio3" value="3" required>
+					Dzieci, młodzież
+				</label>
+			</div>
+
+			<div>
+             	<input class="datepicker-input" type="text" datepicker-popup="yyyy-MM-dd" ng-model="input.date" is-open="opened"  current-text="Dzisiaj" clear-text="Reset" close-text="Zamknij" placeholder="Data"/>
+              <span class="input-group-btn datepicker-icon">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+			<div>
+
+			<div>
+				<input ng-model="input.name" type="text" class="textbox" name="name" placeholder="Nazwa*" required>
+			</div>
+			<div>
+				<textarea ng-model="input.desc" name="desc" placeholder="Opis*" class="textbox" required></textarea>
+			</div>
+
+			<div>
+				<input type="file" name="image" id="image" ng-file-select="onFileSelect($files)">
+			</div>
+
+			<div ng-repeat="additional in range(additionalFilesCount) track by $index">
+				<input type="file" name="image{{$index + 1}}" id="image{{$index + 1}}" ng-file-select="onFileSelect($files)">
+			</div>
+
+			<span class="btn btn-primary" ng-click="addFile()">+</span>
+			<span ng-show="additionalFilesCount > 0" class="btn btn-primary" ng-click="removeFile()">-</span>
+
+			<div style="margin-top:20px;">
+				<input class="btn btn-primary" type="submit" name="submit" value="Dodaj" ng-disabled="createEventForm.$invalid">
+			</div>
+		</fieldset>
+
+		<progressbar ng-if="progress > 0" class="progress-striped active" value="progress" max="maxProgress()" type="{{type}}">
+			<i ng-bind="getProgressInfo()"></i>
+		</progressbar>
+
+		<div ng-repeat="error in errors">
+			<div>{{error}}</div>
+		</div>
+
+	</form>	
+
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-click="close()">Zamknij</button>
+</div>

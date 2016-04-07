@@ -1,0 +1,7 @@
+<div class="group-content common-font" ng-repeat="event in list" ng-show="$index >= startIndex && $index < endIndex">
+	<single-event event="event" remove-func="remove(dir, index)" index="$index"></single-event>
+</div>
+
+<div class="pagination-container" ng-show="showPagination()">
+	<pagination boundary-links="true" total-items="list.length" ng-model="currentPage" items-per-page="itemsPerPage" class="" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+<div>

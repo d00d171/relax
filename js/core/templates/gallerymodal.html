@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h3 class="modal-title" ng-bind="name"></h3>
+</div>
+<div class="modal-body">
+    
+  <div style="height: 305px">
+    <carousel interval="INTERVAL">
+      <slide ng-repeat="photo in photos" style="height:305px;">
+        <img ng-src="{{photo}}" style="margin:auto; height:305px;">
+      </slide>
+    </carousel>
+  </div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="close()">Zamknij</button>
+</div>

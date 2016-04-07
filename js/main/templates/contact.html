@@ -1,0 +1,49 @@
+<div id="contact">
+	<div class="content">
+		<div class="wrap">
+			<div class="contact">
+				<div class="col span_1_of_s">
+					<h3>Napisz do nas</h3>
+					<h4><a href="mailto:kontakt@klubsportowyrelax.h2g.pl">kontakt@klubsportowyrelax.h2g.pl</a></h4>
+					<br/>
+					<form name="contactForm" method="post" ng-submit="sendMessage(input)">
+						<div>
+							<input ng-model="input.name" type="text" class="textbox" name="name" placeholder="Imię">
+						</div>
+						<div>
+							<input ng-model="input.email" type="email" class="textbox" name="email" placeholder="Email zwrotny (wymagane)" required>
+						</div>
+						<div>
+							<input ng-model="input.phone" type="text" class="textbox" name="phone" placeholder="Telefon">
+						</div>
+						<div>
+							<textarea ng-model="input.message" name="message" placeholder="Wiadomość (wymagane)" required></textarea>
+						</div>
+						<div>
+							<span class="button"><input class="btn btn-primary" type="submit" name="submit" value="Wyślij" ng-disabled="contactForm.$invalid || sending"></span>
+							<span ng-show="success" class="email-send-result">
+								Wiadomość wysłana poprawnie
+							</span>
+							<span ng-show="error" class="email-send-result">
+								Spróbuj ponownie
+							</span>
+						</div>
+						<div class="clear"></div>
+						</form>	
+					</div>
+					<div class="col span_1_of_s">
+						<h3>Nasza lokalizacja</h3>
+						<div class="map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.1556103750945!2d21.10050400856715!3d50.04591620268996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473d9dbaad5429f7%3A0xf71d55cf6708edb7!2zV29sYSBSesSZZHppxYRza2EgMjUzQSwgMzMtMTUwIFdvbGEgUnrEmWR6acWEc2th!5e0!3m2!1spl!2spl!4v1424896316099" class="map-frame" frameborder="0" style="border:0"></iframe>
+
+							<br/>
+
+							<small><a href="https://www.google.pl/maps/place/Wola+Rz%C4%99dzi%C5%84ska+253A,+33-150+Wola+Rz%C4%99dzi%C5%84ska/@50.0459162,21.100504,17z/data=!4m2!3m1!1s0x473d9dbaad5429f7:0xf71d55cf6708edb7">Zobacz większą mapę</a></small>
+						</div>		
+					</div>
+					<div class="clear"></div>
+
+				</div>
+			</div>
+		</div>
+	</div>

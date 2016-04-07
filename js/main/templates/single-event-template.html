@@ -1,0 +1,12 @@
+<div ng-if="event.images[0]" class="event-image-wrapper">
+<img class="event-image" ng-src="{{event.images[0]}}"/>
+
+<div class="btn btn-primary btn-gallery" ng-show="event.images.length > 0" 
+	ng-click="showGallery()">Galeria</div>
+</div>
+<div class="event-description-wrapper">
+	<div class="name common-header" ng-bind="event.name"></div>
+	<div class="date" ng-bind="event.date | date: 'yyyy-MM-dd'"></div>
+	<div class="description common-font" ng-bind-html="description_htmlSafe"></div>
+	<div ng-if="isAdmin" class="btn btn-primary" ng-click="removeEvent()">Usuń wydarzenie</div>
+</div>

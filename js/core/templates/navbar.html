@@ -1,0 +1,27 @@
+
+<header id="navbar">
+	<div class="wrap">
+		<div class="logo">
+			<img src="img/logo2.png" alt=""/>
+		</div>
+		<div class="description-wrapper">
+			<div class="description">
+				<div> Klub Sportowy Relax <br/>
+				w Woli Rzędzińskiej</div> 
+				<div> 33-150 Wola Rzędzińska 253A </div>
+			</div>
+		</div>
+		<nav>
+			<a href="#" id="menu-icon"></a>
+			<ul>	
+				<li ng-repeat="item in items" class="item" ui-sref-active="current">
+			        <a ui-sref="app.{{ item[0] | lowercase }}" class="btn">{{ item[1] }}</a>
+			     </li>
+
+				
+				<div class="clear"></div>
+			</ul>
+		</nav>
+		<div class="clear"></div>
+	</div>
+</header>

@@ -1,0 +1,99 @@
+﻿<div id="events">
+	<div class="content">
+		<div class="content-container">
+			<div  class="events-accordion wrap">
+
+					<div ng-if="isAdmin" class="btn btn-primary" ng-click="createEvent()">Dodaj wydarzenie</div>
+
+				  <accordion close-others="true">
+
+				    <accordion-group class="group-one" is-open="open[groups.rekreacja]">
+				      <accordion-heading>
+					      	<div class="wrapper">
+					            <div class="header-image common-round-image"></div>
+					            <div class="header-content common-font common-header">Rekreacja</div>	
+					        </div>
+				        </accordion-heading>
+
+				        <span ng-if="eventsList[groups.rekreacja].length > 0">
+				        	<events-list list="eventsList[groups.rekreacja]" group="groups.rekreacja" remove-func="removeEvent(group, index, dir)"/>
+				        </span>
+				        <span ng-if="eventsList[groups.rekreacja].length === 0">
+				        	<p>Osoby lubiące aktywny wypoczynek nie będą rozczarowani. Rekreacja przyczynia się do rozwoju zainteresowań i osobowości oraz podwyższenia aktywności fizycznej. To lekarstwo na stres i choroby cywilizacyjne.</p>
+				        </span>
+
+				    </accordion-group>
+
+
+				    <accordion-group class="group-two" is-open="open[groups.turystyka]">
+				     	<accordion-heading>
+					      	<div class="wrapper">
+					            <div class="header-image common-round-image"></div>
+					            <div class="header-content common-font common-header">Turystyka</div>	
+					        </div>
+				        </accordion-heading>
+
+				        <span ng-if="eventsList[groups.turystyka].length > 0">
+				        	<events-list list="eventsList[groups.turystyka]" group="groups.turystyka" remove-func="removeEvent(group, index, dir)"/>
+				        </span>
+				        <span ng-if="eventsList[groups.turystyka].length === 0">
+				        	<p>Turystyka jest zjawiskiem złożonym i wielopłaszczyznowym, które odnosi się do wielu aspektów życia człowieka. Dzięki turystyce człowiek regeneruje siły fizyczne i psychiczne, poznaje świat oraz kształtuje swoją osobowość.</p>
+				        </span>
+				    </accordion-group>
+
+
+				    <accordion-group class="group-three" is-open="open[groups.imprezy]" >
+				      	<accordion-heading>
+					      	<div class="wrapper">
+					            <div class="header-image common-round-image"></div>
+					            <div class="header-content common-font common-header">Integracja</div>	
+					        </div>
+				        </accordion-heading>
+
+
+				        <!--div class="group-content common-font">
+				        	<ul class="common-list">
+				        		<li>
+				        			<span class="common-bigger-font">Basen</span>
+				        			<br>
+				        			<span>Otwarty wtedy i wtedy asdfjhasdfsa <br> askjdfhajksdhfkjas</span>
+				        		</li>
+				        		<li class="common-bigger-font">asdfasdfasdf</li>
+				        		<li class="common-bigger-font">asdfasdfasdf</li>
+				        	</ul>
+				        </div-->
+
+				        <span ng-if="eventsList[groups.imprezy].length > 0">
+				        	<events-list list="eventsList[groups.imprezy]" group="groups.imprezy" remove-func="removeEvent(group, index, dir)"/>
+				        </span>
+				        <span ng-if="eventsList[groups.imprezy].length === 0">
+				        	<p>Wzajemna motywacja członków Klubu w oparciu o przyjaźń i koleżeństwo staje się sposobem na poczucie przynależności do grupy oraz realizację własnych zainteresowań i pasji.</p>
+				        </span>
+
+				    </accordion-group>
+
+
+
+				    <accordion-group class="group-four" is-open="open[groups.dzieci]">
+				     	<accordion-heading>
+					      	<div class="wrapper">
+					            <div class="header-image common-round-image"></div>
+					            <div class="header-content common-font common-header">Rodzina i sport</div>	
+					        </div>
+				        </accordion-heading>
+
+				        <span ng-if="eventsList[groups.dzieci].length > 0">
+				        	<events-list list="eventsList[groups.dzieci]" group="groups.dzieci" remove-func="removeEvent(group, index, dir)"/>
+				        </span>
+				        <span ng-if="eventsList[groups.dzieci].length === 0">
+				        	<p>Wspólne rodzinne uprawianie turystyki, rekreacji i sportu oprócz troski o zdrowie i kondycję fizyczną, ściśle wiąże się z budowaniem i wzmacnianiem więzi w rodzinie oraz pogłębianiem wzajemnych relacji pomiędzy rodzicami a dziećmi.</p>
+				        </span>
+
+				    </accordion-group>
+
+			  </accordion>
+		</div>
+	</div>
+	</div>
+
+</div>
