@@ -8,19 +8,19 @@
 					<br/>
 					<form name="contactForm" method="post" ng-submit="sendMessage(input)">
 						<div>
-							<input ng-model="input.name" type="text" class="textbox" name="name" placeholder="Imię">
+							<input ng-model="input.name" type="text" class="textbox" name="name" placeholder="Imię"/>
 						</div>
 						<div>
-							<input ng-model="input.email" type="email" class="textbox" name="email" placeholder="Email zwrotny (wymagane)" required>
+							<input ng-model="input.email" type="email" class="textbox" name="email" placeholder="Email zwrotny (wymagane)" required/>
 						</div>
 						<div>
-							<input ng-model="input.phone" type="text" class="textbox" name="phone" placeholder="Telefon">
+							<input ng-model="input.phone" type="text" class="textbox" name="phone" placeholder="Telefon"/>
 						</div>
 						<div>
 							<textarea ng-model="input.message" name="message" placeholder="Wiadomość (wymagane)" required></textarea>
 						</div>
 						<div>
-							<span class="button"><input class="btn btn-primary" type="submit" name="submit" value="Wyślij" ng-disabled="contactForm.$invalid || sending"></span>
+							<span class="button"><input class="btn btn-primary" type="submit" name="submit" value="Wyślij" ng-disabled="contactForm.$invalid || sending"/></span>
 							<span ng-show="success" class="email-send-result">
 								Wiadomość wysłana poprawnie
 							</span>

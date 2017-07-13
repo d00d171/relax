@@ -6,25 +6,25 @@
 		<fieldset ng-disabled = "progress > 0">
 			<div class="radio">
 				<label>
-					<input ng-model="input.group" type="radio" name="groupsRadio" id="groupsRadio0" value="0" required>
+					<input ng-model="input.group" type="radio" name="groupsRadio" id="groupsRadio0" value="0" required/>
 					Rekreacja
 				</label>
 			</div>
 			<div class="radio">
 				<label>
-					<input ng-model="input.group" type="radio" name="groupsRadio" id="groupsRadio1" value="1" required>
+					<input ng-model="input.group" type="radio" name="groupsRadio" id="groupsRadio1" value="1" required/>
 					Turystyka
 				</label>
 			</div>
 			<div class="radio">
 				<label>
-					<input ng-model="input.group" type="radio" name="groupsRadio" id="groupsRadio2" value="2" required>
+					<input ng-model="input.group" type="radio" name="groupsRadio" id="groupsRadio2" value="2" required/>
 					Imprezy
 				</label>
 			</div>
 			<div class="radio">
 				<label>
-					<input ng-model="input.group" type="radio" name="groupsRadio" id="groupsRadio3" value="3" required>
+					<input ng-model="input.group" type="radio" name="groupsRadio" id="groupsRadio3" value="3" required/>
 					Dzieci, młodzież
 				</label>
 			</div>
@@ -37,25 +37,25 @@
 			<div>
 
 			<div>
-				<input ng-model="input.name" type="text" class="textbox" name="name" placeholder="Nazwa*" required>
+				<input ng-model="input.name" type="text" class="textbox" name="name" placeholder="Nazwa*" required/>
 			</div>
 			<div>
 				<textarea ng-model="input.desc" name="desc" placeholder="Opis*" class="textbox" required></textarea>
 			</div>
 
 			<div>
-				<input type="file" name="image" id="image" ng-file-select="onFileSelect($files)">
+				<input type="file" name="image" id="image" ng-file-select="onFileSelect($files)"/>
 			</div>
 
 			<div ng-repeat="additional in range(additionalFilesCount) track by $index">
-				<input type="file" name="image{{$index + 1}}" id="image{{$index + 1}}" ng-file-select="onFileSelect($files)">
+				<input type="file" name="image{{$index + 1}}" id="image{{$index + 1}}" ng-file-select="onFileSelect($files)"/>
 			</div>
 
 			<span class="btn btn-primary" ng-click="addFile()">+</span>
 			<span ng-show="additionalFilesCount > 0" class="btn btn-primary" ng-click="removeFile()">-</span>
 
 			<div style="margin-top:20px;">
-				<input class="btn btn-primary" type="submit" name="submit" value="Dodaj" ng-disabled="createEventForm.$invalid">
+				<input class="btn btn-primary" type="submit" name="submit" value="Dodaj" ng-disabled="createEventForm.$invalid"/>
 			</div>
 		</fieldset>
 
